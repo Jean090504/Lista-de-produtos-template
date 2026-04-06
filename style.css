@@ -26,10 +26,20 @@ body {
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Organiza os itens um abaixo do outro */
+    flex-direction: column;
     align-items: center;
     padding: 30px;
     text-align: center;
+
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .categoria {
@@ -44,20 +54,28 @@ body {
     width: 180px; 
     height: 180px;
     object-fit: contain; 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease; 
+}
+
+.card:hover img {
+    transform: scale(1.1);
 }
 
 .card h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 8px;
+    font-size: 18px; 
+    color: #222;
+    margin-bottom: 12px;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
 }
 
 .estrelas-container {
     display: inline-block;
     position: relative;
     font-size: 25px;
-    line-height: 1; /* Evita espaços extras verticais */
+    line-height: 1;
     margin-bottom: 10px;
 }
 
@@ -75,17 +93,21 @@ body {
     z-index: 1;
 }
 
-.preco {
-    font-size: 24px;
-    font-weight: 700;
-    color: #2ecc71;
+.precoProduto{
+    font-size: 26px;
+    font-weight: 800;
+    color: #27ae60;
     margin-bottom: 15px;
+    display: block;
 }
 
 .card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-

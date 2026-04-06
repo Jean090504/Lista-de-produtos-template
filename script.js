@@ -13,8 +13,9 @@ function cardProduto (listaProdutos) {
     const nomeProduto = document.createElement('h2')
     nomeProduto.textContent = listaProdutos.nome
 
-    const precoProduto = document.createElement('span')
-    precoProduto.textContent = `R$ ${listaProdutos.preco.toFixed(2)}`
+    const preco = document.createElement('span')
+    preco.classList.add('precoProduto')
+    preco.textContent = `R$ ${listaProdutos.preco.toFixed(2).replace('.', ',')}`
 
     const descricaoProduto = document.createElement('p')
     descricaoProduto.textContent = listaProdutos.descricao
@@ -25,7 +26,6 @@ function cardProduto (listaProdutos) {
     const estrelasPreenchidas = document.createElement('div')
     estrelasPreenchidas.classList.add('estrelas-preenchidas')
     
-    // CORREÇÃO: Acessamos a propriedade .classificacao do objeto
     const porcentagem = listaProdutos.classificacao * 20; 
     estrelasPreenchidas.style.width = `${porcentagem}%`
     
@@ -43,7 +43,7 @@ function cardProduto (listaProdutos) {
     estrelasContainer.append(estrelasPreenchidas, estrelasVazias)
 
 
-    card.append(img, nomeProduto, precoProduto, descricaoProduto, estrelasContainer)
+    card.append(img, nomeProduto, preco, descricaoProduto, estrelasContainer)
 
     return card
 }
