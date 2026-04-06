@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./produtos.js" defer></script>
+    <script src="./script.js" type="module"></script>
+    <script type="module" src="./produtos.js" defer></script>
     <title>Lista de Produtos</title>
 </head>
 <body>
+    <div class="container" id="container">
+        <div class="card">
+            <span class="categoria" >AudioVisual</span>
+            <img src="./img/camera-sony-alpha-a7-iii.png" alt="Produto">
+            
+            <h2 id="produto-nome">Nome do Produto</h2>
+        
+            <span class="preco" id="produto-preco">R$ 0,00</span>
+
+            <p id="produto-desc">Descrição...</p>
+
+            <div class="estrelas-container">
+                <div id="estrelas-vivas" class="estrelas-preenchidas" style="width: 0%;">
+                    <span>★★★★★</span>
+                </div>
+                <div class="estrelas-vazias">
+                    <span>★★★★★</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
     
 </body>
 </html>
